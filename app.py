@@ -3,7 +3,7 @@ import pytesseract
 from imutils import contours
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
-image = cv.imread("Resources/cars/7942772.jpg")
+image = cv.imread("Resources/cars/bentley.jpg")
 
 
 height, width, _ = image.shape
@@ -23,8 +23,6 @@ for c in cnts:
         result = pytesseract.image_to_string(img, lang="rus+eng")
         if len(result) > 7:
             print(result, "-result")
-
-
 
 
 cv.waitKey(0)

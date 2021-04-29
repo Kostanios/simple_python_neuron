@@ -1,6 +1,6 @@
 import cv2 as cv
 
-img = cv.imread('cropped_parking_lot_5.JPG')
+img = cv.imread('Resources\Photos\cat_large.jpg')
 
 
 cv.imshow('Cat', img)
