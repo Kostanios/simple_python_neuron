@@ -10,7 +10,7 @@ gauss = cv.GaussianBlur(img, (7,7), 0)
 
 median = cv.medianBlur(img, 7)
 
-bilateral = cv.bilateralFilter(img, 10, 35, 25)
+bilateral = cv.bilateralFilter(img, 10, 15, 15)
 
 cv.imshow('cat', bilateral)
 

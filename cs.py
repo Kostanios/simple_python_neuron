@@ -10,8 +10,7 @@ colored = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 
 ret, tresh = cv.threshold(colored, 125, 255, cv.THRESH_BINARY)
 
-blur = cv.GaussianBlur(tresh, (5,5), cv.BORDER_DEFAULT)
-
+blur = cv.bilateralFilter(tresh, 10, 15, 15)
 
 
 canny = cv.Canny(blur, 125, 175)
@@ -36,3 +35,5 @@ cv.imshow('eroded', eroded)
 
 
 cv.waitKey(0)
+
+#python cs.py
